@@ -1,0 +1,265 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ReadConfig" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="o_config" Type="OutArgument(scg:Dictionary(x:String, x:String))" />
+    <x:Property Name="i_configFile" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>1048,1719</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.IO</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="ReadConfig" sap:VirtualizedContainerService.HintSize="730,1654" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Start Log Message" sap:VirtualizedContainerService.HintSize="668,52" sap2010:WorkflowViewState.IdRef="LogMessage_1">
+      <ui:LogMessage.Level>
+        <InArgument x:TypeArguments="ui:LogLevel">
+          <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">UiPath.Core.Activities.LogLevel.Info</CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Level>
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">"Read Config Start"</CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
+    <Sequence sap:VirtualizedContainerService.HintSize="668,1451" sap2010:WorkflowViewState.IdRef="Sequence_5">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="ui:WorkbookApplication" Name="wb_config" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign DisplayName="Dictionary 선언" sap:VirtualizedContainerService.HintSize="606,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+        <Assign.To>
+          <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">
+            <CSharpReference x:TypeArguments="scg:Dictionary(x:String, x:String)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">o_config</CSharpReference>
+          </OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">
+            <CSharpValue x:TypeArguments="scg:Dictionary(x:String, x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">new Dictionary&lt;string, string&gt;();</CSharpValue>
+          </InArgument>
+        </Assign.Value>
+      </Assign>
+      <WriteLine DisplayName="엑셀 경로" sap:VirtualizedContainerService.HintSize="606,90" sap2010:WorkflowViewState.IdRef="WriteLine_2">
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_25">$"config file path : {i_configFile}"</CSharpValue>
+        </InArgument>
+      </WriteLine>
+      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="config.xlsx 열기" sap:VirtualizedContainerService.HintSize="606,1088" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000">
+        <ui:ExcelApplicationScope.Body>
+          <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="데이터테이블화 -&gt; key, value 할당" sap:VirtualizedContainerService.HintSize="572,978" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="sd:DataTable" Name="dt_config" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:ExcelReadRange AddHeaders="True" DisplayName="&quot;config&quot; 데이터 테이블화" sap:VirtualizedContainerService.HintSize="510,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_4" SheetName="config">
+                <ui:ExcelReadRange.DataTable>
+                  <OutArgument x:TypeArguments="sd:DataTable">
+                    <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">dt_config</CSharpReference>
+                  </OutArgument>
+                </ui:ExcelReadRange.DataTable>
+                <ui:ExcelReadRange.Range>
+                  <InArgument x:TypeArguments="x:String">
+                    <Literal x:TypeArguments="x:String" Value="" />
+                  </InArgument>
+                </ui:ExcelReadRange.Range>
+              </ui:ExcelReadRange>
+              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="데이터 테이블을 반복하여 딕셔너리에 할당" sap:VirtualizedContainerService.HintSize="510,486" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                <ui:ForEachRow.Body>
+                  <ActivityAction x:TypeArguments="sd:DataRow">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="476,300" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Assign DisplayName="o_config[&quot;Key&quot;] = row[&quot;Value&quot;].ToString() 할당" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_2">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">
+                            <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_12">o_config[row["Key"].ToString().Trim()]</CSharpReference>
+                          </OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">
+                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17">row["Value"].ToString()</CSharpValue>
+                          </InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="WriteLine_1">
+                        <InArgument x:TypeArguments="x:String">
+                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_22">o_config[row["Key"].ToString()] + " : " + row["Value"].ToString()</CSharpValue>
+                        </InArgument>
+                      </WriteLine>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ForEachRow.Body>
+                <ui:ForEachRow.DataTable>
+                  <InArgument x:TypeArguments="sd:DataTable">
+                    <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">dt_config</CSharpValue>
+                  </InArgument>
+                </ui:ForEachRow.DataTable>
+              </ui:ForEachRow>
+              <ui:ExcelCloseWorkbook DisplayName="엑셀 닫기" sap:VirtualizedContainerService.HintSize="510,60" sap2010:WorkflowViewState.IdRef="ExcelCloseWorkbook_1">
+                <ui:ExcelCloseWorkbook.Workbook>
+                  <InArgument x:TypeArguments="ui:WorkbookApplication">
+                    <CSharpValue x:TypeArguments="ui:WorkbookApplication" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">wb_config</CSharpValue>
+                  </InArgument>
+                </ui:ExcelCloseWorkbook.Workbook>
+              </ui:ExcelCloseWorkbook>
+              <ui:LogMessage DisplayName="End Log Message" sap:VirtualizedContainerService.HintSize="510,141" sap2010:WorkflowViewState.IdRef="LogMessage_2">
+                <ui:LogMessage.Level>
+                  <InArgument x:TypeArguments="ui:LogLevel">
+                    <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_19">UiPath.Core.Activities.LogLevel.Info</CSharpValue>
+                  </InArgument>
+                </ui:LogMessage.Level>
+                <ui:LogMessage.Message>
+                  <InArgument x:TypeArguments="x:Object">
+                    <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_20">"Read Config End"</CSharpValue>
+                  </InArgument>
+                </ui:LogMessage.Message>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:LogMessage>
+            </Sequence>
+          </ActivityAction>
+        </ui:ExcelApplicationScope.Body>
+        <ui:ExcelApplicationScope.Workbook>
+          <OutArgument x:TypeArguments="ui:WorkbookApplication">
+            <CSharpReference x:TypeArguments="ui:WorkbookApplication" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">wb_config</CSharpReference>
+          </OutArgument>
+        </ui:ExcelApplicationScope.Workbook>
+        <ui:ExcelApplicationScope.WorkbookPath>
+          <InArgument x:TypeArguments="x:String">
+            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">i_configFile</CSharpValue>
+          </InArgument>
+        </ui:ExcelApplicationScope.WorkbookPath>
+      </ui:ExcelApplicationScope>
+    </Sequence>
+  </Sequence>
+</Activity>
