@@ -2,7 +2,7 @@
   "name": "Template",
   "projectId": "7483ccd1-638f-448f-a61e-d61a286b7520",
   "description": "빈 프로세스",
-  "main": "Main.xaml",
+  "main": "00_Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.22.0-preview]",
     "UiPath.Mail.Activities": "[1.20.3]",
@@ -49,8 +49,8 @@
   "expressionLanguage": "CSharp",
   "entryPoints": [
     {
-      "filePath": "Main.xaml",
-      "uniqueId": "d4f9d871-f547-44ed-9cf9-6c1a1ffde4b3",
+      "filePath": "00_Main.xaml",
+      "uniqueId": "dfb812d4-2b42-4e1c-919b-2b75c00a7492",
       "input": [],
       "output": []
     }
